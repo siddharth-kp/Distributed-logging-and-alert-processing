@@ -16,6 +16,7 @@ import (
 )
 
 func main() {
+	// diff to create PR
 	fmt.Println("Starting DLPAS - Distributed Log Processing and Alerting System\n")
 
 	// Start Service 1 (Log Producer)
