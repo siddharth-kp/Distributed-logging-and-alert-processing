@@ -8,7 +8,7 @@ import (
 
 func main() {
 	s := gin.New()
-	logger.InitLogger("service2")
+	logger.InitLogger("service2", logger.BackendRedis)
 	Logger := logger.GetLogger()
 	Logger.Info("Service 2 started successfully")
 	s.GET("/", func(c *gin.Context) {
