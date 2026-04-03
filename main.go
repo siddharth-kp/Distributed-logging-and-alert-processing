@@ -16,8 +16,7 @@ import (
 )
 
 func main() {
-	// diff to create PR
-	fmt.Println("Starting DLPAS - Distributed Log Processing and Alerting System")
+	fmt.Println("Starting DLPAS - Distributed Log Processing and Alerting System\n")
 
 	// Start Service 1 (Log Producer)
 	service1Cmd := exec.Command("go", "run", "./service1/main.go")
@@ -46,7 +45,7 @@ func main() {
 	}
 	fmt.Println("✓ Service 3 (Processor) started")
 
-	fmt.Println("All services running. Press Ctrl+C to stop.")
+	fmt.Println("\nAll services running. Press Ctrl+C to stop.\n")
 
 	// Handle graceful shutdown
 	sigCh := make(chan os.Signal, 1)
