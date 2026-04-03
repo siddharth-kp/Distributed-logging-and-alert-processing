@@ -19,7 +19,7 @@ A Go-based distributed system for collecting, processing, and alerting on logs f
 
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/siddharth-kp/Distributed-logging-and-alert-processing.git
    cd DLPAS
    ```
 
