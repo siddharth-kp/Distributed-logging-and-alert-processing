@@ -1,28 +1,16 @@
 package logger
 
 import (
+	"github.com/redis/go-redis/v9"
+	"log/slog"
 	"context"
 	"encoding/json"
-	"log/slog"
-	"os"
 	"time"
-
-	"github.com/redis/go-redis/v9"
 )
 
 type RedisHandler struct {
-	rdb         *redis.Client
+	rdb *redis.Client
 	serviceName string
-}
-
-func NewRedisHandler(serviceName string) slog.Handler {
-	rdb := redis.NewClient(&redis.Options{
-		Addr: os.Getenv("REDIS_ADDR"),
-	})
-	return &RedisHandler{
-		rdb:         rdb,
-		serviceName: serviceName,
-	}
 }
 
 func (h *RedisHandler) Enabled(ctx context.Context, level slog.Level) bool {
